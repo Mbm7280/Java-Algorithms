@@ -1,5 +1,7 @@
 package one;
 
+import common.SortHelper;
+
 public class SelectionSort02 {
 
     private SelectionSort02(){}
@@ -29,13 +31,24 @@ public class SelectionSort02 {
 
     public static void main(String[] args) {
 
-        Integer[] arr = {10,9,8,7,6,5,4,3,2,1};
+        /*Integer[] arr = {10,9,8,7,6,5,4,3,2,1};
         SelectionSort02.sort(arr);
         for(int i = 0;i < arr.length;i++){
             System.out.println(arr[i]);
             System.out.println(" ");
         }
-        System.out.println();
+        System.out.println();*/
+
+        int N = 20000;
+        Integer[] arr = SortHelper.genereateRandomArray(N, 0, 100000000);
+
+        for(int i = 0; i < arr.length;i++){
+            System.out.println(arr[i]);
+        }
+
+        SortHelper.testSort("one.SelectionSort02",arr);
+        return;
+
     }
 
 
